@@ -9,13 +9,17 @@ export class AppComponent {
   name!: string;
   date!: string;
   amount!: number;
+  miles!: number;
   onNameChange(value: string) {
     this.name = value;
   }
   onDateChange(value: string) {
     this.date = value;
   }
-  onAmountChange(value: number) {
-    this.amount = value;
+  onAmountChange(value: string) {
+    this.amount = parseInt(value);
+  }
+  onMilesChange(value: string) {
+    this.miles = parseInt(value);
   }
 }

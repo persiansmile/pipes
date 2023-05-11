@@ -30,5 +30,15 @@
       <div> {{ amount | currency:'USD' }}</div>
     </div>
   </div>
+  <div class="row">
+    <div class="form-group col">
+      <label>miles</label>
+      <input class="form-control" (input)="onMilesChange(($any($event.target)).value)" />
+    </div>
+    <div class="col">
+      <label for=""><b>kilometer</b></label>
+      <div> {{ miles | convert: 'm' }}</div>
+    </div>
+  </div>
 
 </div>
